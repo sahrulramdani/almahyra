@@ -39,4 +39,32 @@ class UserModel extends Model
 
         return $getUser;
     }
+
+    public function getID()
+    {
+        $query = $this->db->query("SELECT id_user FROM tb03_usr ORDER BY id_user DESC LIMIT 1")->getResult();
+
+        if ($query != null) {
+            $idUser = $query[0]->id_user;
+            $getNumber = intval(substr($idUser, -5)) + 1;
+            $newID = 'USR' . str_pad($getNumber, 5, '0', STR_PAD_LEFT);
+        } else {
+            $newID = 'USR00001';
+        }
+
+        return $newID;
+    }
+
+    public function cekUsername($username)
+    {
+        $query = $this->db->query("SELECT * FROM `tb03_usr` WHERE username = '$username'")->getResult();
+
+        if ($query != null) {
+            $cek = true;
+        } else {
+            $cek = false;
+        }
+
+        return $cek;
+    }
 }

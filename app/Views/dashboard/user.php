@@ -3,6 +3,18 @@
 <?= $this->section('content'); ?>
 
 <div class="main-content">
+
+    <?php if (session()->getFlashdata('pesan')) : ?>
+    <div class="alert alert-success mt-1" role="alert">
+        <?= session()->getFlashdata('pesan'); ?>
+    </div>
+    <?php endif; ?>
+    <?php if (session()->getFlashdata('gagal')) : ?>
+    <div class="alert alert-danger mt-1" role="alert">
+        <?= session()->getFlashdata('gagal'); ?>
+    </div>
+    <?php endif; ?>
+
     <div class="row">
         <div class="col">
             <h3>Halaman User</h3>
@@ -18,7 +30,7 @@
                         <h5 class="header-title m-auto d-block">List User</h5>
                     </div>
                     <div class="col-lg-9 mb-1">
-                        <a href="" class="btn btn-primary button-tambah">Tambah </a>
+                        <a href="/dashboard/user/new" class="btn btn-primary button-tambah">Tambah </a>
                     </div>
                 </div>
                 <div class="table-responsive text-nowrap p-4" style="font-size: 13px;">
@@ -43,11 +55,15 @@
                                 <td><?= $lu['level_user']; ?></td>
                                 <td><?= $lu['no_telp']; ?></td>
                                 <td>
-                                    <img src="/images/layouts/<?= $lu['foto']; ?>" alt="" width="20%">
+                                    <img src="/images/upload/<?= $lu['foto']; ?>" alt="" width="20%">
                                 </td>
                                 <td class="action">
                                     <a href=""><i class='bx bx-edit-alt'></i></a>
-                                    <a href=""><i class='bx bxs-x-square'></i></a>
+                                    <a href="/dashboard/user/delete/<?= $lu['id_user']; ?>"
+                                        onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Secara Permanen ?')">
+                                        <i class='bx bxs-x-square'></i>
+                                    </a>
+                                </td>
                                 </td>
                             </tr>
                             <?php endforeach ?>

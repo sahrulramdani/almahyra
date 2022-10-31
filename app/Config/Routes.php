@@ -76,6 +76,9 @@ $routes->get('/dashboard/product/edit/(:any)', 'ProductController::editProduct/$
 $routes->post('/dashboard/product/update', 'ProductController::updateProduct');
 
 $routes->get('/dashboard/user', 'UserController::index');
+$routes->get('/dashboard/user/new', 'UserController::newUser');
+$routes->post('/dashboard/user/save', 'UserController::saveUser');
+$routes->get('/dashboard/user/delete/(:any)', 'UserController::deleteUser/$1');
 
 $routes->get('/dashboard/pembimbing', 'PembimbingController::index');
 $routes->get('/dashboard/pembimbing/new', 'PembimbingController::newPembimbing');

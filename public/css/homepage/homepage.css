@@ -1,0 +1,153 @@
+.logo {
+  width: 20%;
+}
+
+.button-red {
+  background-color: red;
+  color: white;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+
+.button-red:hover {
+  background-color: #b90000;
+}
+
+.subjudul-bh {
+  color: #03a4ed;
+}
+
+.list-icon-daftar {
+  width: 30px;
+  color: #b90000;
+}
+
+.card-product > .product-title {
+  font-family: "Akronim";
+  color: #ffc700;
+  font-size: 70px;
+}
+
+.product-periode {
+  border-radius: 10px;
+  padding: 15px;
+  background-color: blue;
+  margin-top: 150px;
+  box-shadow: 8px 8px 0px rgb(18, 0, 78);
+}
+
+.product-periode > h5 {
+  color: white;
+  font-weight: bold;
+}
+
+.card-product > .product-button > a {
+  background-image: linear-gradient(red, blue);
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+.card-product > .product-button > a:hover {
+  background-image: linear-gradient(blue, red);
+}
+
+.detail-produk {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.detail-produk > .nav-detail-produk > .nav-item > .nav-link {
+  margin: 10px;
+  background-color: rgb(255, 93, 93);
+  color: white;
+}
+
+.detail-produk > .nav-detail-produk > .nav-item > .active {
+  margin: 10px;
+  background-color: red;
+  color: white;
+}
+
+.blue-color {
+  color: #03a4ed;
+}
+
+.blue-color-2 {
+  color: #023b82;
+}
+
+.color-red {
+  color: red;
+}
+
+.p-detail {
+  font-size: 18px;
+}
+
+.poster-produk {
+  position: relative;
+  z-index: 30;
+}
+
+.poster-produk:hover {
+  transform: scale(1.05);
+  transition: 2s;
+}
+
+.pembimbing > .col-lg-4 > img {
+  border-radius: 100%;
+  border: 10px red solid;
+}
+
+.pembimbing > .info {
+  background: rgba(255, 106, 96, 0.559);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 106, 96, 0.579) 0%,
+    rgba(255, 141, 103, 0.561) 100%
+  );
+  border-radius: 15px;
+}
+
+.pembimbing > .info > .info-detail {
+  background: rgb(255, 106, 96);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 106, 96, 1) 0%,
+    rgba(255, 141, 103, 1) 100%
+  );
+  border-radius: 15px;
+  width: 80%;
+  height: fit-content;
+  color: white;
+}
+
+.detail-tentang > ul > li {
+  margin-top: 10px;
+  list-style-type: disc;
+}
+
+.pembimbing > .info > .info-detail > p {
+  color: white;
+}
+
+.logo-footer {
+  width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    width: 40%;
+  }
+
+  .p-detail {
+    font-size: 13px;
+  }
+
+  h5 {
+    font-size: 13px;
+  }
+}

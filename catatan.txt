@@ -1,0 +1,22 @@
+Dashboard
+	Belum memiliki konten 
+Layout
+	Header Desc 
+		- Tambah 
+		- Hapus
+		- Edit
+	Pendaftaran
+		- Tambah 
+		- Hapus
+		- Edit
+	Testimoni
+		- Tambah 
+		- Hapus
+		- Edit
+	Nomor Telepon
+		- Edit
+
+Pembimbing
+	- Tambah
+	- Hapus
+	- Edit
